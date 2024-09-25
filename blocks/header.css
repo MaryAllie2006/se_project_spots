@@ -3,6 +3,7 @@
   display:flex;
   padding: 10px 0;
   justify-content: center;
+  margin-top: 0;
 }
 
 .header__logo{
