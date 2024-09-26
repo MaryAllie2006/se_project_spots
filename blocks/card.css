@@ -21,6 +21,10 @@
   line-height: 24px;
   text-align: left;
   color: #212121;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 
 
 }
