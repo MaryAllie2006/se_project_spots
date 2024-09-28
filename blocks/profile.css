@@ -8,7 +8,7 @@
   width: 190px;
   height: 190px;
   margin-right: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .profile__column {
@@ -19,7 +19,6 @@
 .profile__name {
   margin: 0 0 12px;
   width: 420px;
-  height: 32px;
   font-weight: 500;
   font-size: 32px;
   line-height: 32px;
@@ -28,12 +27,14 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  color: #212121;
+
 }
 
 .profile__description {
   margin: 0;
-  width: 97px;
-  height: 16px;
+  color: #212121B2;
+  width: 420px;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
@@ -44,6 +45,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  opacity: 0.7;
 }
 
 .profile__edit-button {
@@ -54,19 +56,28 @@
   line-height: 1;
   background-color: transparent;
   border: none;
-  width: 107.34px;
-  height: 16px;
   padding: 0;
   display: flex;
+  align-items: center;
   cursor: pointer;
   max-width: 420px;
-
 }
 
 .profile__edit-button:hover {
   opacity: 1;
 }
 
+.profile__edit-button::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/Group-2.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}
 .profile__add-button {
   margin-left: auto;
   margin-top: auto;
@@ -77,8 +88,23 @@
   font-size: 16px;
   width: 149px;
   height: 52px;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__add-button::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/Group-26.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
 }
 
 .profile__add-button:hover {
@@ -92,7 +118,6 @@
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    max-width: 288px;
   }
 
   .profile__avatar {
@@ -105,7 +130,9 @@
     font-size: 20px;
     text-align: center;
     margin: 0 0 6px;
-    max-width: 288px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
   }
 
   .profile__description {

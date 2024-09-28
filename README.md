@@ -1,6 +1,20 @@
 # Project 3: Spots
 
+Spots is a responsive web page designed to showcase a collection of different locations through images and descriptions. The project features a user profile section and a gallery of cards below. The design emphasizes a clean, user-friendly interface that adapts seamlessly to different screen sizes, including desktops, tablets, and mobile devices. 
+
+Technologies and Techniques Used:
+
+HTML5 Semantic Elements: Utilized <header>, <main>, <section>, and <footer> tags for better code organization and accessibility.
+Flexbox and Grid Layouts: Employed both Flexbox and CSS Grid to create responsive and flexible layouts.
+Media Queries: created a responsive design by adjusting styles based on screen width.
+BEM Methodology: Used Block-Element-Modifier naming convention for CSS classes to maintain an organized structure.
+CSS Pseudo-elements: Used ::before pseudo-elements to add icons to buttons without additional HTML elements.
+Font Management: Downloaded and integrated custom fonts from Google Fonts. Used @font-face to specify font families and provided fallback options.
+
+
 ### Overview  
+https://drive.google.com/file/d/1_yQ23zN22LnMK0nalD6l2vBGQfGzSFCB/view?usp=sharing 
+
 
 * Intro  
 * Figma  
