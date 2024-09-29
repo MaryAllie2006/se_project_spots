@@ -11,6 +11,8 @@ BEM Methodology: Used Block-Element-Modifier naming convention for CSS classes t
 CSS Pseudo-elements: Used ::before pseudo-elements to add icons to buttons without additional HTML elements.
 Font Management: Downloaded and integrated custom fonts from Google Fonts. Used @font-face to specify font families and provided fallback options.
 
+Github pages: 
+https://maryallie2006.github.io/se_project_spots/
 
 ### Overview  
 https://drive.google.com/file/d/1_yQ23zN22LnMK0nalD6l2vBGQfGzSFCB/view?usp=sharing 
