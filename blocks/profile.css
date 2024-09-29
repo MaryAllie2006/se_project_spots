@@ -28,12 +28,11 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   color: #212121;
-
 }
 
 .profile__description {
   margin: 0;
-  color: #212121B2;
+  color: #212121b2;
   width: 420px;
   font-size: 16px;
   font-weight: 500;
@@ -45,7 +44,6 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
-  opacity: 0.7;
 }
 
 .profile__edit-button {
@@ -61,6 +59,7 @@
   align-items: center;
   cursor: pointer;
   max-width: 420px;
+  font-weight: 500;
 }
 
 .profile__edit-button:hover {
@@ -72,7 +71,7 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url('../images/Group-2.svg');
+  background-image: url("../images/Group-2.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -84,7 +83,7 @@
   color: #fcf5e5;
   background-color: #212121;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   width: 149px;
   height: 52px;
@@ -100,7 +99,7 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url('../images/Group-26.svg');
+  background-image: url("../images/Group-26.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -141,7 +140,7 @@
   }
 
   .profile__column {
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
 
