@@ -131,11 +131,13 @@
     line-height: 20px;
     display: flex;
     justify-content: center;
+    width: unset;
   }
 
   .profile__description {
     text-align: center;
     margin: auto auto 32px;
+    width: unset;
   }
 
   .profile__column {
