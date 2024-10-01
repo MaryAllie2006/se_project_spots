@@ -1,6 +1,6 @@
 .profile {
   display: flex;
-  padding: 34px 0 20px;
+  padding: 20px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
@@ -110,7 +110,7 @@
   background-color: rgba(33, 33, 33, 0.8);
 }
 
-@media screen and (max-width: 706px) {
+@media screen and (max-width: 727px) {
   .profile {
     flex-direction: column;
     max-width: 288px;
@@ -146,8 +146,8 @@
   }
 
   .profile__edit-button {
-    margin: 0 0 20px;
     align-self: center;
+    padding-bottom: 20px;
   }
   .profile__add-button {
     margin: 0;
