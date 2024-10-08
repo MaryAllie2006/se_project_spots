@@ -1,0 +1,101 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.modal__container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 730px;
+  box-sizing: border-box;
+  padding: 32px 50px;
+  position: relative;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/Group\ 27.svg);
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 40%;
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 17.6px;
+  opacity: 70%;
+  color: #212121b2;
+  border-radius: 8px;
+
+}
+
+.modal__submit-button {
+  width: 156px;
+  padding: 18px 0;
+  background-color: #212121;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.modal__input {
+  padding: 16px 12px;
+}
+
+@media screen and (max-width: 727px) {
+  .modal{
+    pad: 0 10px;
+  }
+  .modal__container {
+    padding: 12px;
+  }
+  .modal__title {
+    font-size: 20px;
+    margin: 10px 0 34px;
+  }
+  .modal__close-button{
+    top: 12px;
+    right: 12px;
+    margin-top: 10px;
+  }
+  .modal__label{
+    margin-bottom: 24px;
+  }
+  .modal__submit-button{
+    width: 100%;
+  }
+}
