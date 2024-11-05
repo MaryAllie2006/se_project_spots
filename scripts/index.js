@@ -107,7 +107,9 @@ function handleAddCardSubmit(evt){
   evt.preventDefault();
   const inputValues ={ name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
-  cardList.prepend(cardElement)
+  cardList.prepend(cardElement);
+  document.querySelector('#add-card-name-input').value = '';
+  document.querySelector('#add-card-link-input').value = '';
   closeModal(cardModal);
 }
 
@@ -135,8 +137,6 @@ previewModalCloseButton.addEventListener("click", () => {
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
-
-
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
