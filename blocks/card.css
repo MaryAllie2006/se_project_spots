@@ -103,6 +103,14 @@
   .card__delete-button{
     left: 246px;
   }
+  .card__like-button{
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+  .card__title {
+    margin-right: 20px;
+  }
 }
 
 
