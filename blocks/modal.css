@@ -30,6 +30,7 @@
   max-width: 80vw;
   max-height: 80vh;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .modal_opened {
@@ -48,8 +49,8 @@
 
 .modal__close-button {
   position: absolute;
-  top: 32px;
-  right: 50px;
+  top: -3px;
+  left: 740px;
   background-image: url(../images/Group\ 27.svg);
   background-color: transparent;
   border: 0;
@@ -171,15 +172,14 @@
 
 @media screen and (max-width: 320px) {
   .modal__image {
-    width: 288px;
-    height: 192px;
     object-fit: cover;
+    border-radius: 4px;
   }
   .modal__content_type_preview {
-    width: fit-content;
+    width: 288px;
     height: 192px;
     top: 50px;
-    border-radius: 8px;
+    left: 16px;
   }
   .modal__close_type_preview {
     top: -50px;

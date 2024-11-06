@@ -52,7 +52,7 @@ const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = document.querySelector(".modal__image");
 const previewModalCaptionEl = document.querySelector(".modal__caption");
 const previewModalCloseButton = document.querySelector(
-  ".modal__close_type_preview"
+  ".modal__close-button--type-preview"
 );
 
 const cardTemplate = document.querySelector("#card-template");
