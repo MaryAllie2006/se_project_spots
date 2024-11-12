@@ -57,6 +57,7 @@
   background-color: #ffffff;
   width: 100%;
   max-width: 730px;
+  height: 415px;
   box-sizing: border-box;
   padding: 32px 50px;
   position: relative;
@@ -64,22 +65,21 @@
 
 .modal__close-button {
   position: absolute;
-  top: 5px;
-  left: calc(100% + 20px);
-  /* right: -20px; */
+  top: 30px;
+  left: 640px;
   background-image: url(../images/Group\ 27.svg);
-  background-color: transparent;
   background-position: center;
+  background-color: transparent;
   border: 0;
-  width: 23px;
-  height: 23px;
-  padding: 0;
   opacity: 40%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
-.modal__close_type_preview {
-  background-image: url(../images/delete27.svg);
+.modal__close-button--type-preview {
+  background-image: url(../images/Close\ Icon.svg);
+  background-position: center;
   background-color: transparent;
   width: 40px;
   height: 40px;
@@ -103,7 +103,7 @@
 .modal__label {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 32px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -112,7 +112,7 @@
   line-height: 17.6px;
   opacity: 70%;
   color: #212121b2;
-  border-radius: 8px;
+  border: 8px;
 }
 
 .modal__caption {
@@ -192,17 +192,49 @@
   }
 
   .modal__container {
-    padding: 12px;
+    width: 300px;
+    height: 336px;
+    padding: 0px 12px;
+    border-radius: 8px;
+  }
+  .modal__title {
+    font-size: 20px;
+    margin-top: 12px;
+    margin-bottom: 24px;
   }
 
+  .modal__label {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .modal__caption {
+    font-size: 16px;
+    font-weight: 500;
+    width: 175px;
+    height: 27px;
+  }
+  .modal__submit-button {
+    width: 276px;
+    height: 52px;
+    padding: 0px;
+    margin-bottom: 12px;
+  }
   .modal__content_type_preview {
-    border-radius: 4px 0px 0px 0px;
+    border-radius: 4px;
+  }
+  .modal__close-button{
+    top: 12px;
+    left: 248px;
+    width: 40px;
+    height: 40px;
+    opacity: 40%;
+  }
+  .modal__close-button--type-preview{
+    top: -30px;
+    left: 250px;
   }
 
-  .modal__close-button {
-    left: calc(90%);
-    top: -20px;
-  }
+
 
   .modal__image {
     width: 288px;
@@ -212,25 +244,5 @@
     object-fit: cover;
     border-radius: 4px;
     margin-top: 10px;
-  }
-
-  .modal__title {
-    font-size: 20px;
-    margin: 10px 0 24px;
-  }
-
-  .modal__label {
-    margin-bottom: 24px;
-    font-size: 14px;
-  }
-  .modal__caption {
-    font-size: 16px;
-    font-weight: 500;
-    width: 175px;
-    height: 27px;
-  }
-  .modal__submit-button {
-    width: 100%;
-    padding: 14px 0;
   }
 }
