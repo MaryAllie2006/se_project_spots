@@ -1,5 +1,4 @@
-import { resetValidation } from './scripts/validation.js';
-import { disableButton } from './scripts/validation.js';
+//import { disableButton, resetValidation, enableValidation, config, } from './validation.js';
 const initialCards = [
   {
     name: "Mountain house",
@@ -31,13 +30,14 @@ const initialCards = [
   },
 ];
 
+
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardAddButton = document.querySelector(".profile__add-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
 const editModal = document.querySelector("#edit-modal");
-const editFormElement = document.querySelector(".modal__form");
+const editFormElement = editModal.querySelector(".modal__form");
 const editModalCloseButton = editModal.querySelector(".modal__close-button");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
@@ -46,7 +46,7 @@ const editModalDescriptionInput = editModal.querySelector(
 
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
-const cardSubmitButton = cardModal.querySelector(".modal__button");
+const cardSubmitButton = cardModal.querySelector(".modal__submit-button");
 const cardModalCloseButton = cardModal.querySelector(".modal__close-button");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
@@ -88,6 +88,7 @@ function getCardElement(data) {
     previewModalImageEl.src = data.link;
     previewModalImageEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
+    openModal(previewModal);
   });
 
   return cardElement;
@@ -122,7 +123,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
   evt.target.reset();
-  disableButton(cardSubmitButton, config);
+  disableButton(cardSubmitButton, settings);
   closeModal(cardModal);
 }
 
@@ -131,7 +132,7 @@ profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
   //const inputList = Array.from(editFormElement.querySelectorAll(".modal__input"));
-  resetValidation(editForm, inputList);
+  resetValidation( editFormElement, settings);
   openModal(editModal);
 });
 
