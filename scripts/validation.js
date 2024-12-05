@@ -6,6 +6,17 @@ const settings = {
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error"
 }
+
+const resetValidation = (formEl, inputList) => {
+  inputList.forEach((input)=> {
+   hideInputError(formEl, input)
+  })
+  const buttonEl = formEl.querySelector(settings.submitButtonSelector);
+  if (buttonEl) {
+    buttonEl.disabled = true;
+    buttonEl.classList.add(settings.inactiveButtonClass);
+  }
+}
 const showInputError  = (formEl, inputEl, errorMsg, config ) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
@@ -47,13 +58,6 @@ const setEventListeners = (formEl, config) => {
     buttonEl.disabled = true;
     buttonEl.classList.add("modal__submit-button_disabled");
   }
-
-  /*const resetValidation = (formEl, inputList) => {
-     inputList.forEach((input)=> {
-      hideInputError(formEl, input)
-     })
-  }
-  */
 
   toggleButtonState(inputList, buttonEl, config);
 

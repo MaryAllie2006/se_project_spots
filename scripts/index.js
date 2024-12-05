@@ -1,4 +1,5 @@
-
+import { resetValidation } from './scripts/validation.js';
+import { disableButton } from './scripts/validation.js';
 const initialCards = [
   {
     name: "Mountain house",
@@ -91,15 +92,23 @@ function getCardElement(data) {
 
   return cardElement;
 }
+function closeOverlayClick(evt){
+  if(evt.target.classList.contains("modal")){
+    closeModal(evt.target);
+  }
+}
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  modal.addEventListener("click", closeOverlayClick);
 
 }
-
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("click", closeOverlayClick);
+
 }
+
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
@@ -113,14 +122,16 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
   evt.target.reset();
-  disableButton(cardSubmitButton, settings);
+  disableButton(cardSubmitButton, config);
   closeModal(cardModal);
 }
+
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  //resetValidation(editForm, [profileName, profileDescription]);
+  //const inputList = Array.from(editFormElement.querySelectorAll(".modal__input"));
+  resetValidation(editForm, inputList);
   openModal(editModal);
 });
 
@@ -147,3 +158,4 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardList.prepend(cardElement);
 });
+
