@@ -57,7 +57,6 @@
   background-color: #ffffff;
   width: 100%;
   max-width: 730px;
-  min-height: 415px;
   box-sizing: border-box;
   padding: 32px 50px;
   position: relative;
@@ -82,7 +81,7 @@
   cursor: pointer;
 }
 
-.modal__close-button--type-preview {
+.modal__close-button_type_preview {
   background-image: url(../images/Close\ Icon.svg);
   background-position: center;
   background-color: transparent;
@@ -165,6 +164,8 @@
   padding: 16px 12px;
   margin: 8px 0 0;
   color: #212121;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .modal__input::placeholder {
@@ -236,10 +237,7 @@
   }
 
   .modal__container {
-    display: flex;
-    flex-direction: column;
     width: 300px;
-    min-height: 432px;
     padding: 12px;
     border-radius: 8px;
 
@@ -282,7 +280,7 @@
     height: 40px;
     opacity: 40%;
   }
-  .modal__close-button--type-preview {
+  .modal__close-button_type_preview{
     top: -30px;
     left: 250px;
   }
@@ -308,4 +306,5 @@
     display: none;
     height: 0;
   }
+
 }
