@@ -99,14 +99,26 @@ function closeOverlayClick(evt){
   }
 }
 
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
   modal.addEventListener("click", closeOverlayClick);
+  document.addEventListener("keydown", handleEscapeKey);
 
 }
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
   modal.removeEventListener("click", closeOverlayClick);
+  document.removeEventListener("keydown", handleEscapeKey);
+
 
 }
 
