@@ -67,7 +67,7 @@
   box-sizing: border-box;
 }
 
-.modal__close-button {
+.modal__close-button_type_preview {
   position: absolute;
   top: 30px;
   left: 640px;
@@ -168,14 +168,15 @@
   transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 }
 
+.modal__input:hover{
+  border-color: #212121;
+}
+
 .modal__input::placeholder {
   color: #212121;
   opacity: 30;
 }
 
-.modal__input:hover {
-  border: 1px solid rgb(33, 33, 33);
-}
 
 .modal__input_type_error {
   border: 1px solid rgba(255, 0, 0, 0.6);
@@ -273,7 +274,7 @@
   .modal__content_type_preview {
     border-radius: 4px;
   }
-  .modal__close-button {
+  .modal__close-button_type_preview {
     top: 12px;
     left: 248px;
     width: 40px;
