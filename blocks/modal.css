@@ -67,7 +67,7 @@
   box-sizing: border-box;
 }
 
-.modal__close-button_type_preview {
+.modal__close-button {
   position: absolute;
   top: 30px;
   left: 640px;
@@ -81,7 +81,7 @@
   cursor: pointer;
 }
 
-.modal__close-button_type_preview {
+.modal__close-button--type-preview{
   background-image: url(../images/Close\ Icon.svg);
   background-position: center;
   background-color: transparent;
@@ -274,7 +274,7 @@
   .modal__content_type_preview {
     border-radius: 4px;
   }
-  .modal__close-button_type_preview {
+  .modal__close-button {
     top: 12px;
     left: 248px;
     width: 40px;
