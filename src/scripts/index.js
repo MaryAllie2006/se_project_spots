@@ -1,4 +1,6 @@
-//import { disableButton, resetValidation, enableValidation, config, } from './validation.js';
+import {enableValidation, settings, disableButton, resetValidation, } from './validation.js';
+
+
 const initialCards = [
   {
     name: "Mountain house",
@@ -166,3 +168,5 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardList.prepend(cardElement);
 });
+
+enableValidation(settings);
