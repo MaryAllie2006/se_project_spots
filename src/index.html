@@ -15,15 +15,16 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/Logo.svg" alt="spot logo" class="header__logo" />
+        <img src="<%=require('./images/Logo.svg')%>" alt="spot logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            src="<%=require('./images/avatar.jpg')%>"
             alt="spot logo"
             class="profile__avatar"
           />
+
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -129,7 +130,7 @@
     <div class="modal" id="preview-modal">
       <div class="modal__content modal__content_type_preview">
         <button aria-label="close modal" type="button" class="modal__close-button modal__close-button_type_preview"></button>
-        <img class="modal__image" src="./images/2-photo-by-ceiline-from-pexels.jpg" alt="image"/>
+        <img class="modal__image" src="#" alt="image"/>
         <p class="modal__caption"></p>
       </div>
     </div>
