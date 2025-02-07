@@ -15,16 +15,28 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="<%=require('./images/Logo.svg')%>" alt="spot logo" class="header__logo" />
+        <img
+          src="<%=require('./images/Logo.svg')%>"
+          alt="spot logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/avatar.jpg')%>"
-            alt="spot logo"
-            class="profile__avatar"
-          />
-
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img
+                src="<%=require('./images/profile-pencil.svg')%>"
+                alt="pencil Icon"
+                class="profile__pencil-icon"
+              />
+            </button>
+            <img
+              src="<%=require('./images/avatar.jpg')%>"
+              alt="spot logo"
+              class="profile__avatar"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -38,11 +50,7 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <img
-                  src=""
-                  alt=""
-                  class="card__image"
-                />
+                <img src="" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__like-button"></button>
@@ -72,7 +80,9 @@
                 maxlength="40"
                 required
               />
-              <span id="profile-name-input-error" class="modal__error" >Please fill out this field</span>
+              <span id="profile-name-input-error" class="modal__error"
+                >Please fill out this field</span
+              >
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -85,17 +95,20 @@
                 maxlength="200"
                 required
               />
-              <span id="profile-description-input-error" class="modal__error" >Please lengthen this text to 2 characters or more (you are currently usina 1 character).</span>
+              <span id="profile-description-input-error" class="modal__error"
+                >Please lengthen this text to 2 characters or more (you are
+                currently usina 1 character).</span
+              >
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
         </div>
       </div>
-      <div class="modal"  id="add-card-modal">
+      <div class="modal" id="add-card-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-button"></button>
           <h2 class="modal__title">New Post</h2>
-          <form class="modal__form" id="add-card-form" >
+          <form class="modal__form" id="add-card-form">
             <label for="add-card-link-input" class="modal__label">
               Image Link
               <input
@@ -106,7 +119,9 @@
                 placeholder="Paste a link to the picture"
                 required
               />
-              <span id="add-card-link-input-error"  class="modal__error" > Please enter a URL </span>
+              <span id="add-card-link-input-error" class="modal__error">
+                Please enter a URL
+              </span>
             </label>
             <label for="add-card-name-input" class="modal__label">
               Caption
@@ -120,7 +135,9 @@
                 maxlength="30"
                 required
               />
-              <span id="add-card-name-input-error" class="modal__error" > Please fill out this field </span>
+              <span id="add-card-name-input-error" class="modal__error">
+                Please fill out this field
+              </span>
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
@@ -129,9 +146,55 @@
     </div>
     <div class="modal" id="preview-modal">
       <div class="modal__content modal__content_type_preview">
-        <button aria-label="close modal" type="button" class="modal__close-button modal__close-button_type_preview"></button>
-        <img class="modal__image" src="#" alt="image"/>
+        <button
+          aria-label="close modal"
+          type="button"
+          class="modal__close-button modal__close-button_type_preview"
+        ></button>
+        <img class="modal__image" src="#" alt="image" />
         <p class="modal__caption"></p>
+      </div>
+    </div>
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close-button"></button>
+        <h2 class="modal__title">Edit Profile Avatar</h2>
+        <form class="modal__form-avatar" id="edit-avatar-form">
+          <label for="profile-avatar-input" class="modal__label">
+            Profile Picture
+            <input
+              id="profile-avatar-input"
+              type="url"
+              class="modal__input"
+              name="avatar"
+              placeholder="Paste a link to an image"
+              required
+            />
+            <span id="profile-avatar-input-error" class="modal__error">
+              Please enter a URL
+            </span>
+          </label>
+          <button type="submit" class="modal__submit-button">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!--TODO - style the modal-->
+    <div class="modal" id="delete-modal">
+      <div class="modal__delete-container">
+        <button
+          type="button"
+          class="modal__close-button modal__close-button_type-delete"></button>
+        <h2 class="modal__title-delete">
+          Are you sure you want to delete this image?
+        </h2>
+        <form class="modal__form-delete" id="delete-form">
+          <div class="modal__delete-content">
+            <div class="modal__delete-btn">
+              <button type="submit" class="modal__delete-button">Delete</button>
+              <button type="button" class="modal__cancel-button">Cancel</button>
+          </div>
+        </form>
       </div>
     </div>
   </body>
