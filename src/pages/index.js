@@ -68,7 +68,7 @@ const avatarNameInput = avatarModal.querySelector("#profile-avatar-input");
 
 // delete modal elements
 const deleteModal = document.querySelector("#delete-modal");
-const deleteForm = deleteModal.querySelector("#modal_form");
+const deleteForm = deleteModal.querySelector("#delete-form");
 
 // preview image popup elements
 const previewModal = document.querySelector("#preview-modal");
