@@ -110,8 +110,14 @@ function handleDeleteCard(cardElement, cardId) {
   selectedCardId = cardId;
   openModal(deleteModal);
 }
-function handleLike(evt) {
-  cardLikeBtn.classList.toggle("card__like-button_liked");
+function handleLike(evt, id) {
+  // remove this line - evt.target.classList.toggle("card__like-button_liked");
+  // 1. check whether card is currently liked or not
+  //      const isLiked = ???
+  // 2. call the changeLikeStatus method, passing it the appropriate arguments
+  // 3. handle the response (.then and .catch)
+  // 4. in the .then toggle the active class (so it appears and is visible in the DOM)
+
 }
 
 function handleImageClick(data) {
@@ -131,12 +137,16 @@ function getCardElement(data) {
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
 
+
+  //TODO - if the card is liked, set the active class on the card 
+
+
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-  cardLikeBtn.addEventListener("click", handleLike);
-  cardDeleteBtn.addEventListener("click", (evt) =>
+  cardLikeBtn.addEventListener("click", (evt) => handleLike(evt, data._id));
+  cardDeleteBtn.addEventListener("click", () =>
     handleDeleteCard(cardElement, data._id)
   );
   cardImageEl.addEventListener("click", () => handleImageClick(data));
