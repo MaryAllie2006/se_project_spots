@@ -16,7 +16,6 @@ const api = new Api({
   },
 });
 
-//destructure the second item in the callback of the .then()
 api
   .getAppInfo()
   .then(([cards, userInfo]) => {
@@ -150,10 +149,6 @@ function getCardElement(data) {
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
 
-
-  //TODO - if the card is liked, set the active class on the card
-
-
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
@@ -197,8 +192,6 @@ function closeModal(modal) {
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
 
-  //Change text content to "Saving.."
-
   const submitBtn = evt.submitter;
   setButtonText(submitBtn, true, "Save", "Saving...");
 
@@ -208,9 +201,8 @@ function handleEditFormSubmit(evt) {
       about: editModalDescriptionInput.value,
     })
     .then((data) => {
-      // TODO - use data argument instead of the input values
-      profileName.textContent = editModalNameInput.value;
-      profileDescription.textContent = editModalDescriptionInput.value;
+      profileName.textContent = data.name;
+      profileDescription.textContent = data.about;
       closeModal(editModal);
     })
     .catch(console.error)
@@ -233,7 +225,6 @@ function handleAddCardSubmit(evt) {
   closeModal(cardModal);
 }
 
-//finish avatar submission handler
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
   const submitBtn = evt.submitter;
@@ -271,9 +262,6 @@ cardModalCloseButton.addEventListener("click", () => {
   closeModal(cardModal);
 });
 
-
-//TODO - select avatar modal button at the top of the page
-// TODO - not sure where but make sure the link actually changes the photo
 avatarAddButton.addEventListener("click", () => {
   openModal(avatarModal);
 });
