@@ -208,11 +208,11 @@
   background-image: url(../images/Close\ Icon.svg);
   border: none;
   cursor: pointer;
-  position: absolute;
-  top: 24px; /* Adjust top spacing */
-  right: 24px; /* Adjust right spacing */
+  position: relative;
   width: 40px;
   height: 40px;
+  left: calc(100% + 24px);
+  top: -35px; 
 }
 
 

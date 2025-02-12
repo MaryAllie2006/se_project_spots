@@ -6,7 +6,6 @@ class Api {
 
 
   getAppInfo() {
-    // Call getUserInfo it in this array
   return Promise.all([this.getInitialCards()]);
   }
 
@@ -15,6 +14,7 @@ class Api {
       headers: this._headers,
     }).then((res) => {
       if(res.ok){
+        console.log(res)
         return res.json();
       }
       Promise.reject(`Error: ${res.status}`);
@@ -99,7 +99,7 @@ class Api {
       if(res.ok) {
         return res.json();
       }
-      Promise.reject(`Error: ${res.status}`);
+       return Promise.reject(`Error: ${res.status}`);
     });
   }
 
