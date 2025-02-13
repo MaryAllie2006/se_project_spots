@@ -71,7 +71,7 @@
   position: absolute;
   top: 30px;
   left: 640px;
-  background-image: url(../images/Group\ 27.svg);
+  background-image: url(../images/Group-27.svg);
   background-position: center;
   background-color: transparent;
   border: 0;
@@ -82,7 +82,7 @@
 }
 
 .modal__close-button_type_preview {
-  background-image: url(../images/Close\ Icon.svg);
+  background-image: url(../images/Close-Icon.svg);
   background-position: center;
   background-color: transparent;
   width: 40px;
@@ -212,7 +212,7 @@
   width: 40px;
   height: 40px;
   left: calc(100% + 24px);
-  top: -35px; 
+  top: -35px;
 }
 
 
