@@ -205,7 +205,7 @@
 }
 
 .modal__close-button_type-delete {
-  background-image: url(../images/Close\ Icon.svg);
+  background-image: url(../images/Close-Icon.svg);
   border: none;
   cursor: pointer;
   position: relative;
