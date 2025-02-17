@@ -6,7 +6,7 @@ class Api {
 
 
   getAppInfo() {
-  return Promise.all([this.getInitialCards(this.getUserInfo())]);
+  return Promise.all([this.getInitialCards(), this.getUserInfo()]);
   }
 
   getInitialCards() {
@@ -49,12 +49,13 @@ class Api {
   }
 
   // TODO - implement Post / cards
-  addCard(cards) {
+  addCard({name,link}) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({
-        cards
+        name,
+        link
       }),
     }).then((res) => {
       if(res.ok) {
@@ -92,6 +93,7 @@ class Api {
 
   changeLikeStatus(id, isLiked) {
     const method = isLiked? "DELETE" : "PUT";
+    console.log(id);
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
       method: method,
       headers: this._headers,
