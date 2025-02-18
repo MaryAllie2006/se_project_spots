@@ -9,17 +9,21 @@ class Api {
   return Promise.all([this.getInitialCards(), this.getUserInfo()]);
   }
 
+  _checkResponse(res){
+    if(res.ok){
+      console.log(res)
+      return res.json();
+    }
+    return Promise.reject(`Error: ${res.status}`);
+  }
+
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       headers: this._headers,
-    }).then((res) => {
-      if(res.ok){
-        console.log(res)
-        return res.json();
-      }
-      Promise.reject(`Error: ${res.status}`);
-    });
+    }).then(this._checkResponse);
   }
+
+
 
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {

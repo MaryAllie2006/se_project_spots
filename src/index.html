@@ -81,7 +81,7 @@
                 required
               />
               <span id="profile-name-input-error" class="modal__error"
-                >Please fill out this field</span
+                ></span
               >
             </label>
             <label for="profile-description-input" class="modal__label">
@@ -136,7 +136,7 @@
                 required
               />
               <span id="add-card-name-input-error" class="modal__error">
-                Please fill out this field
+
               </span>
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -155,6 +155,14 @@
         <p class="modal__caption"></p>
       </div>
     </div>
+    <div class="modal modal_type_image">
+      <div class="modal__content">
+        <img class="modal__image" src="" alt="" />
+        <p class="modal__caption"></p> 
+        <button class="modal__close"></button>
+      </div>
+    </div>
+
     <div class="modal" id="avatar-modal">
       <div class="modal__container">
         <button type="button" class="modal__close-button"></button>
@@ -191,6 +199,7 @@
             <div class="modal__delete-btn">
               <button type="submit" class="modal__delete-button">Delete</button>
               <button type="button" class="modal__cancel-button">Cancel</button>
+            </div>
           </div>
         </form>
       </div>
