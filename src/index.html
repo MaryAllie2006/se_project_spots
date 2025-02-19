@@ -80,9 +80,7 @@
                 maxlength="40"
                 required
               />
-              <span id="profile-name-input-error" class="modal__error"
-                ></span
-              >
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -97,7 +95,7 @@
               />
               <span id="profile-description-input-error" class="modal__error"
                 >Please lengthen this text to 2 characters or more (you are
-                currently usina 1 character).</span
+                currently using 1 character)</span
               >
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -119,9 +117,7 @@
                 placeholder="Paste a link to the picture"
                 required
               />
-              <span id="add-card-link-input-error" class="modal__error">
-                Please enter a URL
-              </span>
+              <span id="add-card-link-input-error" class="modal__error"> </span>
             </label>
             <label for="add-card-name-input" class="modal__label">
               Caption
@@ -135,9 +131,7 @@
                 maxlength="30"
                 required
               />
-              <span id="add-card-name-input-error" class="modal__error">
-
-              </span>
+              <span id="add-card-name-input-error" class="modal__error"> </span>
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
@@ -151,18 +145,12 @@
           type="button"
           class="modal__close-button modal__close-button_type_preview"
         ></button>
-        <img class="modal__image" src="#" alt="image" />
-        <p class="modal__caption"></p>
+        <figure>
+          <img class="modal__image" src="#" alt="image" />
+          <figcaption class="modal__caption"></figcaption>
+        </figure>
       </div>
     </div>
-    <div class="modal modal_type_image">
-      <div class="modal__content">
-        <img class="modal__image" src="" alt="" />
-        <p class="modal__caption"></p> 
-        <button class="modal__close"></button>
-      </div>
-    </div>
-
     <div class="modal" id="avatar-modal">
       <div class="modal__container">
         <button type="button" class="modal__close-button"></button>
@@ -178,9 +166,7 @@
               placeholder="Paste a link to an image"
               required
             />
-            <span id="profile-avatar-input-error" class="modal__error">
-              Please enter a URL
-            </span>
+            <span id="profile-avatar-input-error" class="modal__error"> </span>
           </label>
           <button type="submit" class="modal__submit-button">Save</button>
         </form>
@@ -190,7 +176,8 @@
       <div class="modal__delete-container">
         <button
           type="button"
-          class="modal__close-button modal__close-button_type-delete"></button>
+          class="modal__close-button modal__close-button_type-delete"
+        ></button>
         <h2 class="modal__title-delete">
           Are you sure you want to delete this image?
         </h2>
