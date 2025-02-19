@@ -202,7 +202,7 @@
   background-image: url(../images/Close-Icon.svg);
   border: none;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 40px;
   left: calc(100% + 24px);
