@@ -256,7 +256,7 @@ function handleAvatarSubmit(evt) {
   api
     .editAvatarInfo(avatarNameInput.value)
     .then((data) => {
-      avatarElement.src = userInfo.avatar;
+      avatarElement.src = data.avatar;
       closeModal(avatarModal);
     })
     .catch(console.error)
