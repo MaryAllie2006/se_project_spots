@@ -67,6 +67,7 @@
   left: 371px;
   cursor: pointer;
   position: absolute;
+
 }
 
 .card__delete-button:hover {
@@ -97,7 +98,7 @@
     line-height: 16px;
   }
   .card__delete-button {
-    left: 270px;
+    left:450px;
   }
   .card__like-button{
     background-repeat: no-repeat;
